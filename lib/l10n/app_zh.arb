@@ -1,0 +1,71 @@
+{
+    "@@locale": "zh",
+    "appName": "Flutter 仪表板应用",
+    "@appName": {
+        "description": "Flutter 仪表板应用"
+    },
+    "homeBarItem": "首页",
+    "@homeBarItem": {
+        "description": "首页"
+    },
+    "analysisBarItem": "分析",
+    "@analysisBarItem": {
+        "description": "分析"
+    },
+    "settingsBarItem": "设置",
+    "@settingsBarItem": {
+        "description": "设置"
+    },
+    "confirm": "确定",
+    "@confirm": {
+        "description": "确定"
+    },
+    "cancel": "取消",
+    "@cancel": {
+        "description": "取消"
+    },
+    "selectOption": "选择选项",
+    "@selectOption": {
+        "description": "选择选项"
+    },
+    "systemLanguage": "系统语言",
+    "@systemLanguage": {
+        "description": "系统语言"
+    },
+    "systemTheme": "系统主题",
+    "@systemTheme": {
+        "description": "系统主题"
+    },
+    "defaultTheme": "默认主题",
+    "@defaultTheme": {
+        "description": "默认主题"
+    },
+    "lightTheme": "浅色主题",
+    "@lightTheme": {
+        "description": "浅色主题"
+    },
+    "darkTheme": "深色主题",
+    "@darkTheme": {
+        "description": "深色主题"
+    },
+    "homeScreenTitle": "首页",
+    "@homeScreenTitle": {
+        "description": "首页"
+    },
+    "languageScreenTitle": "选择语言",
+    "@languageScreenTitle": {
+        "description": "选择语言"
+    },
+    "english": "英文",
+    "@english": {
+        "description": "英文"
+    },
+    "chinese": "中文",
+    "@chinese": {
+        "description": "中文"
+    },
+    "chineseTraditional": "繁体中文",
+    "@chineseTraditional": {
+        "description": "繁体中文"
+    }
+}

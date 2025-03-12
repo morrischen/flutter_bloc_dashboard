@@ -1,0 +1,71 @@
+{
+    "@@locale": "en",
+    "appName": "Flutter Dashboard App",
+    "@appName": {
+        "description": "Flutter Dashboard App"
+    },
+    "homeBarItem": "Home",
+    "@homeBarItem": {
+        "description": "Home"
+    },
+    "analysisBarItem": "Analysis",
+    "@analysisBarItem": {
+        "description": "Analysis"
+    },
+    "settingsBarItem": "Settings",
+    "@settingsBarItem": {
+        "description": "Settings"
+    },
+    "confirm": "Confirm",
+    "@confirm": {
+        "description": "Confirm"
+    },
+    "cancel": "Cancel",
+    "@cancel": {
+        "description": "Cancel"
+    },
+    "selectOption": "Select Option",
+    "@selectOption": {
+        "description": "Select Option"
+    },
+    "systemLanguage": "System Language",
+    "@systemLanguage": {
+        "description": "System Language"
+    },
+    "systemTheme": "System Theme",
+    "@systemTheme": {
+        "description": "System Theme"
+    },
+    "defaultTheme": "Default Theme",
+    "@defaultTheme": {
+        "description": "Default Theme"
+    },
+    "lightTheme": "Light Theme",
+    "@lightTheme": {
+        "description": "Light Theme"
+    },
+    "darkTheme": "Dark Theme",
+    "@darkTheme": {
+        "description": "Dark Theme"
+    },
+    "homeScreenTitle": "Home Page",
+    "@homeScreenTitle": {
+        "description": "Home Page"
+    },
+    "languageScreenTitle": "Select Language",
+    "@languageScreenTitle": {
+        "description": "Select Language"
+    },
+    "english": "English",
+    "@english": {
+        "description": "English"
+    },
+    "chinese": "Chinese",
+    "@chinese": {
+        "description": "Chinese"
+    },
+    "chineseTraditional": "Chinese (Traditional)",
+    "@chineseTraditional": {
+        "description": "Chinese (Traditional)"
+    }
+}
