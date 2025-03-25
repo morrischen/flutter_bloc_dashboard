@@ -36,7 +36,7 @@ jobs:
 
       # Code formatting
       - name: Check code formatting
-      run: flutter format --set-exit-if-changed.
+        run: flutter format --set-exit-if-changed.
       
       # Runs unit test
       - name: Run tests
