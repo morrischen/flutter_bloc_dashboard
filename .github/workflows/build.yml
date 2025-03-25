@@ -1,0 +1,59 @@
+name: Flutter CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    # The machine, we can also use windows-latest or ubuntu-latest
+    # We are choosing macos-latest because we will be also building for iOS
+    runs-on: macos-latest
+
+    steps:
+      # Clones the project on the machine
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Installs flutter and related dependency on this machine
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          # If you want to use a specific version of flutter
+          # flutter-version: '3.29.0'  
+
+      # Fetches proj dependencies from pub
+      - name: Install dependencies
+        run: flutter pub get
+
+      # Verifies if the dart code is formatted well
+      - name: Verify formatting
+        run: dart format --output=none --set-exit-if-changed .
+        # --set-exit-if-changed stops execution if the any code is not well formatted
+        # --output=none prints files which needs to be formatted
+      
+      # Checks for Symantic errors. Can be configured using analysis_options.yaml
+      - name: Analyze project source
+        run: flutter analyze
+        # optionally use --fatal-warnings to stop execution if any warnings are found
+
+      # Runs unit test
+      - name: Run tests
+        run: flutter test
+
+      # 如果需要打包 apk，可以加入下面的步驟
+      - name: Build APK
+        run: flutter build apk --release
+
+      # Upload apk to Firebase distribution
+      # - name: Upload apk to Firebase distribution
+      #   uses: wzieba/Firebase-Distribution-Github-Action@v1.7.0
+      #   with:
+      #     appId: ${{ secrets.FIREBASE_APP_ID_ANDROID }}
+      #     serviceCredentialsFileContent: ${{ secrets.SERVICE_CREDENTIALS_FILE_CONTENT }}
+      #     groups: all_testers
+      #     file: build/app/outputs/flutter-apk/app-release.apk
