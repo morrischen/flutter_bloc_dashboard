@@ -36,8 +36,7 @@ final router = GoRouter(
             GoRoute(
               path: Routes.analysis,
               builder:
-                  (context, state) =>
-                      Container(child: Center(child: Text('Analysis'))),
+                  (context, state) => const Center(child: Text('Analysis')),
             ),
           ],
         ),
