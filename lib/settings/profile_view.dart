@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_dashboard/extension/ext_build_context.dart';
 import 'package:flutter_bloc_dashboard/widgets/app_colors.dart';
+import 'package:flutter_bloc_dashboard/widgets/app_spacing.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({
@@ -22,12 +23,7 @@ class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(
-        top: MediaQuery.of(context).padding.top + 16,
-        left: 16,
-        right: 16,
-        bottom: 16,
-      ),
+      padding: AppSpacing.all(Spacing.md),
       color: context.isDarkMode
           ? AppColors.userInfoBackgroundDark
           : Colors.grey.shade200,
@@ -38,7 +34,7 @@ class ProfileView extends StatelessWidget {
             backgroundColor: context.isDarkMode
                 ? AppColors.avatarBackgroundDark
                 : AppColors.avatarBackgroundLight,
-            radius: 50,
+            radius: 36,
             child: profileImage,
           ),
           Column(

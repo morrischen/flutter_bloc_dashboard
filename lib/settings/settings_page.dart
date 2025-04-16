@@ -20,23 +20,23 @@ class SettingsScreen extends StatelessWidget {
     return BlocProvider(
       create: (context) => SettingsCubit(),
       child: Scaffold(
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              ProfileView(
-                name: 'John Doe',
-                email: 'john.doe@example.com',
-                profileImage: Assets.images.imgProfile.image(
-                  width: 64,
-                  height: 64,
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                ProfileView(
+                  name: 'John Doe',
+                  email: 'john.doe@example.com',
+                  profileImage: Assets.images.imgProfile.image(
+                    width: 44,
+                    height: 44,
+                  ),
                 ),
-              ),
-              SettingItem(
-                height: 60,
-                title: AppLocalizations.of(context)!.systemTheme,
-                icon:
-                    context.isDarkMode
-                        ? Assets.icons.icDarkMode.svg(
+                SettingItem(
+                  height: 60,
+                  title: AppLocalizations.of(context)!.systemTheme,
+                  icon: context.isDarkMode
+                      ? Assets.icons.icDarkMode.svg(
                           width: 24,
                           height: 24,
                           colorFilter: const ColorFilter.mode(
@@ -44,18 +44,19 @@ class SettingsScreen extends StatelessWidget {
                             BlendMode.srcIn,
                           ),
                         )
-                        : Assets.icons.icLightMode.svg(),
-                onTap: () => _showThemeModePicker(context),
-              ),
-              Divider(height: 1, color: Colors.grey.shade200),
-              SettingItem(
-                height: 60,
-                title: AppLocalizations.of(context)!.systemLanguage,
-                icon: state.language.icon,
-                onTap: () => _goLanguageScreen(context),
-              ),
-              Divider(height: 1, color: Colors.grey.shade200),
-            ],
+                      : Assets.icons.icLightMode.svg(),
+                  onTap: () => _showThemeModePicker(context),
+                ),
+                Divider(height: 1, color: Colors.grey.shade200),
+                SettingItem(
+                  height: 60,
+                  title: AppLocalizations.of(context)!.systemLanguage,
+                  icon: state.language.icon,
+                  onTap: () => _goLanguageScreen(context),
+                ),
+                Divider(height: 1, color: Colors.grey.shade200),
+              ],
+            ),
           ),
         ),
       ),
@@ -65,13 +66,13 @@ class SettingsScreen extends StatelessWidget {
   /// 顯示主題模式選擇器
   Future<void> _showThemeModePicker(BuildContext context) async {
     final currentTheme = context.read<SettingsCubit>().state.systemTheme;
+    final supportedThemes = SystemTheme.supportedThemes(context);
     final selectedTheme = await showModalBottomSheet(
       context: context,
-      builder:
-          (context) => BottomSheetPicker(
-            items: SystemTheme.supportedThemes(context),
-            selectedItem: currentTheme,
-          ),
+      builder: (context) => BottomSheetPicker(
+        items: supportedThemes,
+        selectedItem: currentTheme,
+      ),
     );
     if (context.mounted && selectedTheme != null) {
       context.read<SettingsCubit>().setSystemTheme(selectedTheme);

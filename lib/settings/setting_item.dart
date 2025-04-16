@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc_dashboard/widgets/app_spacing.dart';
 
 class SettingItem extends StatelessWidget {
   const SettingItem({
@@ -27,14 +28,14 @@ class SettingItem extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.all(12),
+        padding: AppSpacing.all(Spacing.md),
         height: height,
         child: Row(
           children: [
             Expanded(child: Text(title)),
             if (icon != null)
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8),
+                padding: AppSpacing.horizontal(Spacing.sm),
                 child: icon!,
               ),
             const Icon(Icons.chevron_right, size: 32),
