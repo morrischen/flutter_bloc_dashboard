@@ -96,107 +96,149 @@ abstract class AppLocalizations {
     Locale('zh', 'TW')
   ];
 
-  /// Flutter Dashboard App
+  /// Flutter 儀表板應用
   ///
   /// In en, this message translates to:
   /// **'Flutter Dashboard App'**
   String get appName;
 
-  /// Home
+  /// 首頁
   ///
   /// In en, this message translates to:
   /// **'Home'**
   String get homeBarItem;
 
-  /// Analysis
+  /// 分析
   ///
   /// In en, this message translates to:
   /// **'Analysis'**
   String get analysisBarItem;
 
-  /// Settings
+  /// 設定
   ///
   /// In en, this message translates to:
   /// **'Settings'**
   String get settingsBarItem;
 
-  /// Confirm
+  /// 確定
   ///
   /// In en, this message translates to:
   /// **'Confirm'**
   String get confirm;
 
-  /// Cancel
+  /// 取消
   ///
   /// In en, this message translates to:
   /// **'Cancel'**
   String get cancel;
 
-  /// Select Option
+  /// 選擇選項
   ///
   /// In en, this message translates to:
   /// **'Select Option'**
   String get selectOption;
 
-  /// System Language
+  /// 系統語言
   ///
   /// In en, this message translates to:
   /// **'System Language'**
   String get systemLanguage;
 
-  /// System Theme
+  /// 系統主題
   ///
   /// In en, this message translates to:
   /// **'System Theme'**
   String get systemTheme;
 
-  /// Default Theme
+  /// 預設主題
   ///
   /// In en, this message translates to:
   /// **'Default Theme'**
   String get defaultTheme;
 
-  /// Light Theme
+  /// 淺色主題
   ///
   /// In en, this message translates to:
   /// **'Light Theme'**
   String get lightTheme;
 
-  /// Dark Theme
+  /// 深色主題
   ///
   /// In en, this message translates to:
   /// **'Dark Theme'**
   String get darkTheme;
 
-  /// Home Page
+  /// 首頁
   ///
   /// In en, this message translates to:
   /// **'Home Page'**
   String get homeScreenTitle;
 
-  /// Select Language
+  /// 選擇語言
   ///
   /// In en, this message translates to:
   /// **'Select Language'**
   String get languageScreenTitle;
 
-  /// English
+  /// 英文
   ///
   /// In en, this message translates to:
   /// **'English'**
   String get english;
 
-  /// Chinese
+  /// 中文
   ///
   /// In en, this message translates to:
   /// **'Chinese'**
   String get chinese;
 
-  /// Chinese (Traditional)
+  /// 繁體中文
   ///
   /// In en, this message translates to:
   /// **'Chinese (Traditional)'**
   String get chineseTraditional;
+
+  /// 待清潔房間數量count間
+  ///
+  /// In en, this message translates to:
+  /// **'Total Clean Room: {count} rooms'**
+  String totalCleanRoom(Object count);
+
+  /// 待清潔
+  ///
+  /// In en, this message translates to:
+  /// **'Dirty'**
+  String get cleanStatusDirty;
+
+  /// 清潔中
+  ///
+  /// In en, this message translates to:
+  /// **'Cleaning'**
+  String get cleanStatusCleaning;
+
+  /// 已完成
+  ///
+  /// In en, this message translates to:
+  /// **'Finished'**
+  String get cleanStatusFinished;
+
+  /// 任務進度
+  ///
+  /// In en, this message translates to:
+  /// **'Task Progress'**
+  String get taskProgress;
+
+  /// 開始清潔
+  ///
+  /// In en, this message translates to:
+  /// **'Start Cleaning'**
+  String get startCleaning;
+
+  /// 檢視任務
+  ///
+  /// In en, this message translates to:
+  /// **'View Task'**
+  String get viewTask;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

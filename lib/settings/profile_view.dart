@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_dashboard/extension/ext_build_context.dart';
+import 'package:flutter_bloc_dashboard/widgets/app_colors.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({
@@ -27,12 +28,16 @@ class ProfileView extends StatelessWidget {
         right: 16,
         bottom: 16,
       ),
-      color: context.isDarkMode ? Colors.teal : Colors.grey.shade200,
+      color: context.isDarkMode
+          ? AppColors.userInfoBackgroundDark
+          : Colors.grey.shade200,
       child: Row(
         spacing: 12,
         children: [
           CircleAvatar(
-            // backgroundColor: context.isDarkMode ? Colors.blue : null,
+            backgroundColor: context.isDarkMode
+                ? AppColors.avatarBackgroundDark
+                : AppColors.avatarBackgroundLight,
             radius: 50,
             child: profileImage,
           ),

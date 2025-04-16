@@ -2,70 +2,105 @@
     "@@locale": "en",
     "appName": "Flutter Dashboard App",
     "@appName": {
-        "description": "Flutter Dashboard App"
+        "description": "Flutter 儀表板應用"
     },
     "homeBarItem": "Home",
     "@homeBarItem": {
-        "description": "Home"
+        "description": "首頁"
     },
     "analysisBarItem": "Analysis",
     "@analysisBarItem": {
-        "description": "Analysis"
+        "description": "分析"
     },
     "settingsBarItem": "Settings",
     "@settingsBarItem": {
-        "description": "Settings"
+        "description": "設定"
     },
     "confirm": "Confirm",
     "@confirm": {
-        "description": "Confirm"
+        "description": "確定"
     },
     "cancel": "Cancel",
     "@cancel": {
-        "description": "Cancel"
+        "description": "取消"
     },
     "selectOption": "Select Option",
     "@selectOption": {
-        "description": "Select Option"
+        "description": "選擇選項"
     },
     "systemLanguage": "System Language",
     "@systemLanguage": {
-        "description": "System Language"
+        "description": "系統語言"
     },
     "systemTheme": "System Theme",
     "@systemTheme": {
-        "description": "System Theme"
+        "description": "系統主題"
     },
     "defaultTheme": "Default Theme",
     "@defaultTheme": {
-        "description": "Default Theme"
+        "description": "預設主題"
     },
     "lightTheme": "Light Theme",
     "@lightTheme": {
-        "description": "Light Theme"
+        "description": "淺色主題"
     },
     "darkTheme": "Dark Theme",
     "@darkTheme": {
-        "description": "Dark Theme"
+        "description": "深色主題"
     },
     "homeScreenTitle": "Home Page",
     "@homeScreenTitle": {
-        "description": "Home Page"
+        "description": "首頁"
     },
     "languageScreenTitle": "Select Language",
     "@languageScreenTitle": {
-        "description": "Select Language"
+        "description": "選擇語言"
     },
     "english": "English",
     "@english": {
-        "description": "English"
+        "description": "英文"
     },
     "chinese": "Chinese",
     "@chinese": {
-        "description": "Chinese"
+        "description": "中文"
     },
     "chineseTraditional": "Chinese (Traditional)",
     "@chineseTraditional": {
-        "description": "Chinese (Traditional)"
+        "description": "繁體中文"
+    },
+    "totalCleanRoom": "Total Clean Room: {count} rooms",
+    "@totalCleanRoom": {
+        "description": "待清潔房間數量count間",
+        "placeholder": {
+            "count": {
+                "type": "int",
+                "format": "number",
+                "description": "房間數量"
+            }
+        }
+    },
+    "cleanStatusDirty": "Dirty",
+    "@cleanStatusDirty": {
+        "description": "待清潔"
+    },
+    "cleanStatusCleaning": "Cleaning",
+    "@cleanStatusCleaning": {
+        "description": "清潔中"
+    },
+    "cleanStatusFinished": "Finished",
+    "@cleanStatusFinished": {
+        "description": "已完成"
+    },
+    "taskProgress": "Task Progress",
+    "@taskProgress": {
+        "description": "任務進度"
+    },
+    "startCleaning": "Start Cleaning",
+    "@startCleaning": {
+        "description": "開始清潔"
+    },
+    "viewTask": "View Task",
+    "@viewTask": {
+        "description": "檢視任務"
     }
 }
