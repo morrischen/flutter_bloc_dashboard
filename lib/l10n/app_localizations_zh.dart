@@ -58,6 +58,29 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get chineseTraditional => '繁体中文';
+
+  @override
+  String totalCleanRoom(Object count) {
+    return '待清洁房间数量: $count间';
+  }
+
+  @override
+  String get cleanStatusDirty => '待清洁';
+
+  @override
+  String get cleanStatusCleaning => '清洁中';
+
+  @override
+  String get cleanStatusFinished => '已完成';
+
+  @override
+  String get taskProgress => '任务进度';
+
+  @override
+  String get startCleaning => '开始清洁';
+
+  @override
+  String get viewTask => '查看任务';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -114,4 +137,27 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get chineseTraditional => '繁體中文';
+
+  @override
+  String totalCleanRoom(Object count) {
+    return '待清潔房間數量: $count間';
+  }
+
+  @override
+  String get cleanStatusDirty => '待清潔';
+
+  @override
+  String get cleanStatusCleaning => '清潔中';
+
+  @override
+  String get cleanStatusFinished => '已完成';
+
+  @override
+  String get taskProgress => '任務進度';
+
+  @override
+  String get startCleaning => '開始清潔';
+
+  @override
+  String get viewTask => '檢視任務';
 }

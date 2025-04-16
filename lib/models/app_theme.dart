@@ -9,7 +9,7 @@ class AppTheme {
       appBarTheme: const AppBarTheme(backgroundColor: Colors.teal),
       colorScheme: ColorScheme.fromSeed(
         brightness: Brightness.dark,
-        seedColor: Colors.white,
+        seedColor: Colors.black,
       ),
     );
   }
@@ -19,7 +19,7 @@ class AppTheme {
       useMaterial3: true,
       appBarTheme: AppBarTheme(backgroundColor: Colors.grey.shade200),
       colorScheme: ColorScheme.fromSeed(
-        seedColor: Colors.grey.shade200,
+        seedColor: Colors.white,
       ),
     );
   }

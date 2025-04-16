@@ -58,4 +58,27 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get chineseTraditional => 'Chinese (Traditional)';
+
+  @override
+  String totalCleanRoom(Object count) {
+    return 'Total Clean Room: $count rooms';
+  }
+
+  @override
+  String get cleanStatusDirty => 'Dirty';
+
+  @override
+  String get cleanStatusCleaning => 'Cleaning';
+
+  @override
+  String get cleanStatusFinished => 'Finished';
+
+  @override
+  String get taskProgress => 'Task Progress';
+
+  @override
+  String get startCleaning => 'Start Cleaning';
+
+  @override
+  String get viewTask => 'View Task';
 }

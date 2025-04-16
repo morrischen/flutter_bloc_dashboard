@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_dashboard/l10n/app_localizations.dart';
 import 'package:flutter_bloc_dashboard/extension/ext_build_context.dart';
+import 'package:flutter_bloc_dashboard/widgets/app_spacing.dart';
 
 class BottomSheetPicker<T> extends StatefulWidget {
   const BottomSheetPicker({
@@ -62,7 +63,7 @@ class _BottomSheetPickerState extends State<BottomSheetPicker> {
         children: [
           // 標題列
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            padding: AppSpacing.horizontal(Spacing.md),
             decoration: BoxDecoration(
               color: context.isDarkMode ? Colors.teal : Colors.grey.shade200,
               border: Border(bottom: BorderSide(color: Colors.grey.shade300)),

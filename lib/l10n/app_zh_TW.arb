@@ -67,5 +67,40 @@
     "chineseTraditional": "繁體中文",
     "@chineseTraditional": {
         "description": "繁體中文"
+    },
+    "totalCleanRoom": "待清潔房間數量: {count}間",
+    "@totalCleanRoom": {
+        "description": "待清潔房間數量count間",
+        "placeholder": {
+            "count": {
+                "type": "int",
+                "format": "number",
+                "description": "房間數量"
+            }
+        }
+    },
+    "cleanStatusDirty": "待清潔",
+    "@cleanStatusDirty": {
+        "description": "待清潔"
+    },
+    "cleanStatusCleaning": "清潔中",
+    "@cleanStatusCleaning": {
+        "description": "清潔中"
+    },
+    "cleanStatusFinished": "已完成",
+    "@cleanStatusFinished": {
+        "description": "已完成"
+    },
+    "taskProgress": "任務進度",
+    "@taskProgress": {
+        "description": "任務進度"
+    },
+    "startCleaning": "開始清潔",
+    "@startCleaning": {
+        "description": "開始清潔"
+    },
+    "viewTask": "檢視任務",
+    "@viewTask": {
+        "description": "檢視任務"
     }
 }
