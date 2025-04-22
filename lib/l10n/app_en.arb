@@ -16,6 +16,18 @@
     "@settingsBarItem": {
         "description": "設定"
     },
+    "filter": "Filter",
+    "@filter": {
+        "description": "篩選"
+    },
+    "sort": "Sort",
+    "@filter": {
+        "description": "排序"
+    },
+    "all": "All",
+    "@filter": {
+        "description": "全部"
+    },
     "confirm": "Confirm",
     "@confirm": {
         "description": "確定"
@@ -102,5 +114,29 @@
     "viewTask": "View Task",
     "@viewTask": {
         "description": "檢視任務"
+    },
+    "sortCleanStatusAsc": "Clean Status Ascending",
+    "@sortCleanStatusAsc": {
+        "description": "清潔狀態升冪排序"
+    },
+    "sortCleanStatusDesc": "Clean Status Descending",
+    "@sortCleanStatusDesc": {
+        "description": "清潔狀態降冪排序"
+    },
+    "sortHotelNameAsc": "Hotel Name Ascending",
+    "@sortHotelNameAsc": {
+        "description": "飯店名稱升冪排序"
+    },
+    "sortHotelNameDesc": "Hotel Name Descending",
+    "@sortHotelNameDesc": {
+        "description": "飯店名稱降冪排序"
+    },
+    "sortProgressAsc": "Task Progress Ascending",
+    "@sortProgressAsc": {
+        "description": "任務進度升冪排序"
+    },
+    "sortProgressDesc": "Task Progress Descending",
+    "@sortProgressDesc": {
+        "description": "任務進度降冪排序"
     }
 }

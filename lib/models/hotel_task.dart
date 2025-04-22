@@ -1,4 +1,4 @@
-import 'package:flutter_bloc_dashboard/models/enum_status.dart';
+import 'package:flutter_bloc_dashboard/models/enum_set.dart';
 
 class HotelTask {
   HotelTask({
@@ -31,5 +31,12 @@ class HotelTask {
   /// 進度百分比
   String get progressPercent {
     return '${(progress * 100).toStringAsFixed(0)}%';
+  }
+
+  @override
+  String toString() {
+    return 'HotelTask{hotelName: $hotelName, cleanStatus: $cleanStatus, '
+        'dirtyTask: $dirtyTask, cleaningTask: $cleaningTask, '
+        'finishTask: $finishTask, progress: $progress}';
   }
 }

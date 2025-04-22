@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc_dashboard/extension/ext_build_context.dart';
 import 'package:flutter_bloc_dashboard/l10n/app_localizations.dart';
 import 'package:flutter_bloc_dashboard/main.dart';
-import 'package:flutter_bloc_dashboard/models/enum_status.dart';
+import 'package:flutter_bloc_dashboard/models/enum_set.dart';
 import 'package:flutter_bloc_dashboard/models/hotel_task.dart';
 import 'package:flutter_bloc_dashboard/widgets/app_colors.dart';
 import 'package:flutter_bloc_dashboard/widgets/app_spacing.dart';

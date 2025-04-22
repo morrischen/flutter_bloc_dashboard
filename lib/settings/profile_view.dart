@@ -28,7 +28,7 @@ class ProfileView extends StatelessWidget {
           ? AppColors.userInfoBackgroundDark
           : Colors.grey.shade200,
       child: Row(
-        spacing: 12,
+        spacing: Spacing.md,
         children: [
           CircleAvatar(
             backgroundColor: context.isDarkMode

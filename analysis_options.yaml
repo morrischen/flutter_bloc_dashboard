@@ -30,6 +30,7 @@ linter:
   rules:
     # avoid_print: false  # Uncomment to disable the `avoid_print` rule
     # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+    # always_specify_types: true # 此規則會強制要求所有變數、函數參數和返回值都必須明確指定型別
     avoid_redundant_argument_values: true
     avoid_init_to_null: true
     avoid_print: true

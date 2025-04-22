@@ -1,45 +1,56 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_dashboard/extension/ext_build_context.dart';
 import 'package:flutter_bloc_dashboard/gen/assets.gen.dart';
+import 'package:flutter_bloc_dashboard/home/cubit/home_cubit.dart';
+import 'package:flutter_bloc_dashboard/home/cubit/home_state.dart';
 import 'package:flutter_bloc_dashboard/home/hotel_task_card.dart';
 import 'package:flutter_bloc_dashboard/l10n/app_localizations.dart';
-import 'package:flutter_bloc_dashboard/models/enum_status.dart';
+import 'package:flutter_bloc_dashboard/models/enum_set.dart';
 import 'package:flutter_bloc_dashboard/models/hotel_task.dart';
 import 'package:flutter_bloc_dashboard/widgets/app_colors.dart';
 import 'package:flutter_bloc_dashboard/widgets/app_spacing.dart';
+import 'package:flutter_bloc_dashboard/widgets/picker/bottom_sheet_picker.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: context.isDarkMode
-          ? AppColors.darkBackground
-          : AppColors.lightBackground,
-      body: SafeArea(
-        child: CustomScrollView(
-          slivers: [
-            SliverAppBar(
-              backgroundColor: context.isDarkMode
-                  ? AppColors.userInfoBackgroundDark
-                  : Colors.grey.shade200,
-              expandedHeight: 76,
-              collapsedHeight: kToolbarHeight,
-              flexibleSpace: FlexibleSpaceBar(
-                background: _buildUserInfo(context),
+    return BlocProvider(
+      create: (context) => HomeCubit()..initialze(),
+      child: Scaffold(
+        body: BlocBuilder<HomeCubit, HomeState>(
+          builder: (context, state) => SafeArea(
+            child: Container(
+              color: context.isDarkMode
+                  ? AppColors.darkBackground
+                  : AppColors.lightBackground,
+              child: CustomScrollView(
+                slivers: [
+                  SliverAppBar(
+                    backgroundColor: context.isDarkMode
+                        ? AppColors.userInfoBackgroundDark
+                        : Colors.grey.shade200,
+                    expandedHeight: 76,
+                    collapsedHeight: kToolbarHeight,
+                    flexibleSpace: FlexibleSpaceBar(
+                      background: _buildUserInfo(context),
+                    ),
+                  ),
+                  SliverPersistentHeader(
+                    pinned: true,
+                    delegate: _SearchBarDelegate(),
+                  ),
+                  SliverToBoxAdapter(
+                    child: _buildHotelListView(context),
+                  ),
+                ],
               ),
             ),
-            SliverPersistentHeader(
-              pinned: true,
-              delegate: _SearchBarDelegate(),
-            ),
-            SliverToBoxAdapter(
-              child: _buildHotelListView(context),
-            ),
-          ],
+          ),
         ),
       ),
     );
@@ -63,12 +74,28 @@ class _SearchBarDelegate extends SliverPersistentHeaderDelegate {
       padding: AppSpacing.symmetric(horizontal: Spacing.md),
       alignment: Alignment.centerLeft,
       child: Row(
+        spacing: Spacing.md,
         children: [
           // 篩選按鈕
           ElevatedButton.icon(
-            onPressed: () {},
+            onPressed: () => _showCleanStatusPicker(context),
             icon: const Icon(Icons.search),
-            label: const Text('篩選'),
+            label: Text(AppLocalizations.of(context)!.filter),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: context.isDarkMode
+                  ? AppColors.buttonPrimary
+                  : AppColors.buttonPrimaryLight,
+              foregroundColor: AppColors.buttonOnPrimary,
+              elevation: 2,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+            ),
+          ),
+          ElevatedButton.icon(
+            onPressed: () => _showSortPicker(context),
+            icon: const Icon(Icons.sort),
+            label: Text(AppLocalizations.of(context)!.sort),
             style: ElevatedButton.styleFrom(
               backgroundColor: context.isDarkMode
                   ? AppColors.buttonPrimary
@@ -94,6 +121,44 @@ class _SearchBarDelegate extends SliverPersistentHeaderDelegate {
   @override
   bool shouldRebuild(covariant SliverPersistentHeaderDelegate oldDelegate) {
     return true;
+  }
+
+  /// 顯示清潔狀態選擇器
+  Future<void> _showCleanStatusPicker(BuildContext context) async {
+    final CleanStatus currentCleanStatus =
+        context.read<HomeCubit>().state.selectedCleanStatus;
+    final List<String> cleanStatus =
+        CleanStatus.values.map((e) => e.toLocaleString(context)).toList();
+    final String? selectedCleanStatus = await showModalBottomSheet<String>(
+      context: context,
+      builder: (context) => BottomSheetPicker<String>(
+        items: cleanStatus,
+        selectedItem: currentCleanStatus.toLocaleString(context),
+      ),
+    );
+    if (context.mounted && selectedCleanStatus != null) {
+      final CleanStatus status =
+          CleanStatus.getStatus(context, selectedCleanStatus);
+      context.read<HomeCubit>().setSelectedCleanStatus(context, status);
+    }
+  }
+
+  /// 顯示排序方式選擇器
+  Future<void> _showSortPicker(BuildContext context) async {
+    final Sort currentSort = context.read<HomeCubit>().state.selectedSort;
+    final List<String> sorts =
+        Sort.values.map((e) => e.toLocaleString(context)).toList();
+    final String? selectedSort = await showModalBottomSheet<String>(
+      context: context,
+      builder: (context) => BottomSheetPicker<String>(
+        items: sorts,
+        selectedItem: currentSort.toLocaleString(context),
+      ),
+    );
+    if (context.mounted && selectedSort != null) {
+      final Sort sort = Sort.getSort(context, selectedSort);
+      context.read<HomeCubit>().setSelectedSort(context, sort);
+    }
   }
 }
 
@@ -174,22 +239,22 @@ Widget _buildUserInfo(BuildContext context) {
 
 /// 顯示飯店清潔任務列表
 Widget _buildHotelListView(BuildContext context) {
-  final Random random = Random();
+  final hotelTasksFiltered =
+      context.watch<HomeCubit>().state.hotelTasksFiltered;
   return ListView.builder(
     padding: AppSpacing.all(Spacing.md),
     shrinkWrap: true,
     physics: const NeverScrollableScrollPhysics(),
-    itemCount: 5,
+    itemCount: hotelTasksFiltered.length,
     itemBuilder: (context, index) {
       return HotelTaskCard(
         hotelTask: HotelTask(
-          hotelName: 'Hotel ${index + 1}',
-          dirtyTask: random.nextInt(10),
-          cleaningTask: random.nextInt(10),
-          finishTask: random.nextInt(10),
-          cleanStatus:
-              CleanStatus.values[random.nextInt(CleanStatus.values.length)],
-          progress: random.nextDouble(),
+          hotelName: hotelTasksFiltered[index].hotelName,
+          dirtyTask: hotelTasksFiltered[index].dirtyTask,
+          cleaningTask: hotelTasksFiltered[index].cleaningTask,
+          finishTask: hotelTasksFiltered[index].finishTask,
+          cleanStatus: hotelTasksFiltered[index].cleanStatus,
+          progress: hotelTasksFiltered[index].progress,
         ),
       );
     },

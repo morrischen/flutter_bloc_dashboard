@@ -15,7 +15,7 @@ class LanguageScreen extends StatelessWidget {
       ),
       body: ListView.separated(
         itemBuilder: (context, index) {
-          final language = Language.supportedLanguages(context)[index];
+          final Language language = Language.supportedLanguages(context)[index];
           return ListTile(
             title: Text(language.name),
             trailing: _getTrailing(context, language),
@@ -30,8 +30,8 @@ class LanguageScreen extends StatelessWidget {
   }
 
   Widget? _getTrailing(BuildContext context, Language language) {
-    final state = context.watch<SettingsCubit>().state;
-    return state.language == language ? const Icon(Icons.check) : null;
+    final Language currentLanguage = context.watch<SettingsCubit>().state.language;
+    return currentLanguage == language ? const Icon(Icons.check) : null;
   }
 
   /// 語言變更

@@ -120,6 +120,24 @@ abstract class AppLocalizations {
   /// **'Settings'**
   String get settingsBarItem;
 
+  /// 全部
+  ///
+  /// In en, this message translates to:
+  /// **'Filter'**
+  String get filter;
+
+  /// No description provided for @sort.
+  ///
+  /// In en, this message translates to:
+  /// **'Sort'**
+  String get sort;
+
+  /// No description provided for @all.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get all;
+
   /// 確定
   ///
   /// In en, this message translates to:
@@ -239,6 +257,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'View Task'**
   String get viewTask;
+
+  /// 清潔狀態升冪排序
+  ///
+  /// In en, this message translates to:
+  /// **'Clean Status Ascending'**
+  String get sortCleanStatusAsc;
+
+  /// 清潔狀態降冪排序
+  ///
+  /// In en, this message translates to:
+  /// **'Clean Status Descending'**
+  String get sortCleanStatusDesc;
+
+  /// 飯店名稱升冪排序
+  ///
+  /// In en, this message translates to:
+  /// **'Hotel Name Ascending'**
+  String get sortHotelNameAsc;
+
+  /// 飯店名稱降冪排序
+  ///
+  /// In en, this message translates to:
+  /// **'Hotel Name Descending'**
+  String get sortHotelNameDesc;
+
+  /// 任務進度升冪排序
+  ///
+  /// In en, this message translates to:
+  /// **'Task Progress Ascending'**
+  String get sortProgressAsc;
+
+  /// 任務進度降冪排序
+  ///
+  /// In en, this message translates to:
+  /// **'Task Progress Descending'**
+  String get sortProgressDesc;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

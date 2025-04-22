@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   // 背景顏色
+  static const Color seedColor = Color(0xFF607D8B);
   static const Color darkBackground = Color(0xFF1A1A1A);
   static const Color lightBackground = Color(0xFFF5F5F5);
   static const Color userInfoBackground = Color(0xFFFFFFFF);
@@ -39,6 +40,8 @@ class AppColors {
   static const Color dividerColor = Color(0xFFEEEEEE);
   static const Color dividerColorDark = Color(0xFF424242);
   static const Color cardBackgroundDark = Color(0xFF2A2A2A);
+  static const Color pickerBarBackgroundDark = Color(0xFF313131);
+  static const Color pickerBarBackgroundLight = Color(0xFFFFEFD5);
 
   // 頭像背景顏色
   static const Color avatarBackgroundDark = Color(0xFFFFBF00);
