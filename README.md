@@ -90,6 +90,9 @@ flutter run
 
 ### 1. 主畫面
 - 顯示清潔任務列表，包含飯店名稱、清潔狀態和進度。
+| **淺色主題** | **深色主題** |
+| ------------- | ------------- |
+|![Screenshots](screenshots/home_light_theme.png)|![Screenshots](screenshots/home_dark_theme.png)|
 - 支援篩選功能，根據清潔狀態（待清潔、清潔中、已完成）篩選任務。
 - 提供排序功能，按清潔狀態、飯店名稱或進度進行升序或降序排序。
 
