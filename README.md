@@ -92,7 +92,7 @@ flutter run
 - 顯示清潔任務列表，包含飯店名稱、清潔狀態和進度。
   | **淺色主題**                      | **深色主題**                      |
   |----------------------------------|----------------------------------|
-  | ![Screenshots](screenshots/home_light_theme.png) | ![Screenshots](screenshots/home_dark_theme.png) |
+  | <img src="screenshots/home_light_theme.png" alt="淺色主題" height="478"> | <img src="screenshots/home_dark_theme.png" alt="深色主題" height="478"> |
 
 - 支援篩選功能，根據清潔狀態（待清潔、清潔中、已完成）篩選任務。
   | **篩選功能**                      |
@@ -101,18 +101,18 @@ flutter run
 - 提供排序功能，按清潔狀態、飯店名稱或進度進行升序或降序排序。
   | **排序功能**                      |
   |----------------------------------|
-  | <img src="screenshots/task_sorting.png" alt="篩選功能" height="478"> |
+  | <img src="screenshots/task_sorting.png" alt="排序功能" height="478"> |
 
 ### 2. 設定頁面
 - 支援繁體中文、簡體中文和英文，切換語言時，應用程式會即時更新顯示語言。
-  | **簡體中文**  | **切換語言功能** | **簡體中文** |
+  | **簡體中文**  | **切換語言功能** | **繁體中文** |
   |--------------|----------------|-------------|
-  | ![Screenshots](screenshots/change_language_zh.png) | ![Screenshots](screenshots/change_language.png) |![Screenshots](screenshots/change_language_zh_tw.png) |
+  | <img src="screenshots/change_language_zh.png" alt="簡體中文"> | <img src="screenshots/change_language.png" alt="切換語言功能"> | <img src="screenshots/change_language_zh_tw.png" alt="切換語言功能"> |
 - 支援淺色與深色模式，可根據系統設定自動切換主題，或在設定頁面中手動選擇主題。
   | **切換主題功能**                   |
   |----------------------------------|
-  | ![Screenshots](screenshots/change_theme.png) |
+  | <img src="screenshots/change_theme.png" alt="切換主題功能" height="478"> |
 - 提供用戶個人資訊檢視功能。
   | **淺色主題**                      | **深色主題**                      |
   |----------------------------------|----------------------------------|
-  | ![Screenshots](screenshots/setting_light_theme.png) | ![Screenshots](screenshots/setting_dark_theme.png) |
+  | <img src="screenshots/setting_light_theme.png" alt="淺色主題" height="478"> | <img src="screenshots/setting_dark_theme.png" alt="深色主題" height="478"> |
