@@ -61,7 +61,7 @@ void main() {
       expect(find.byIcon(Icons.search), findsOneWidget);
     });
 
-    testWidgets('變更語系', (WidgetTester tester) async {
+    testWidgets('changes language', (WidgetTester tester) async {
       // 設定 MockSettingsState 的初始狀態
       final mockSettingsState = SettingsState.initial().copyWith(
         language: Language(
