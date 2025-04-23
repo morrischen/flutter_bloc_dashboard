@@ -29,7 +29,7 @@ class DashboardApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
+    return BlocProvider<SettingsCubit>(
       create: (context) => SettingsCubit(),
       child: BlocBuilder<SettingsCubit, SettingsState>(
         buildWhen: (previous, current) => previous != current,

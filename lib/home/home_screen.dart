@@ -19,12 +19,13 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
+    return BlocProvider<HomeCubit>(
       create: (context) => HomeCubit()..initialze(),
       child: Scaffold(
         body: BlocBuilder<HomeCubit, HomeState>(
           builder: (context, state) => SafeArea(
             child: Container(
+              key: const Key('home_screen_background_container'),
               color: context.isDarkMode
                   ? AppColors.darkBackground
                   : AppColors.lightBackground,
