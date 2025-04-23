@@ -16,6 +16,18 @@
     "@settingsBarItem": {
         "description": "設定"
     },
+    "filter": "篩選",
+    "@filter": {
+        "description": "篩選"
+    },
+    "sort": "排序",
+    "@filter": {
+        "description": "排序"
+    },
+    "all": "全部",
+    "@filter": {
+        "description": "全部"
+    },
     "confirm": "確定",
     "@confirm": {
         "description": "確定"
@@ -67,5 +79,64 @@
     "chineseTraditional": "繁體中文",
     "@chineseTraditional": {
         "description": "繁體中文"
+    },
+    "totalCleanRoom": "待清潔房間數量: {count}間",
+    "@totalCleanRoom": {
+        "description": "待清潔房間數量count間",
+        "placeholder": {
+            "count": {
+                "type": "int",
+                "format": "number",
+                "description": "房間數量"
+            }
+        }
+    },
+    "cleanStatusDirty": "待清潔",
+    "@cleanStatusDirty": {
+        "description": "待清潔"
+    },
+    "cleanStatusCleaning": "清潔中",
+    "@cleanStatusCleaning": {
+        "description": "清潔中"
+    },
+    "cleanStatusFinished": "已完成",
+    "@cleanStatusFinished": {
+        "description": "已完成"
+    },
+    "taskProgress": "任務進度",
+    "@taskProgress": {
+        "description": "任務進度"
+    },
+    "startCleaning": "開始清潔",
+    "@startCleaning": {
+        "description": "開始清潔"
+    },
+    "viewTask": "檢視任務",
+    "@viewTask": {
+        "description": "檢視任務"
+    },
+    "sortCleanStatusAsc": "清潔狀態升冪排序",
+    "@sortCleanStatusAsc": {
+        "description": "清潔狀態升冪排序"
+    },
+    "sortCleanStatusDesc": "清潔狀態降冪排序",
+    "@sortCleanStatusDesc": {
+        "description": "清潔狀態降冪排序"
+    },
+    "sortHotelNameAsc": "飯店名稱升冪排序",
+    "@sortHotelNameAsc": {
+        "description": "飯店名稱升冪排序"
+    },
+    "sortHotelNameDesc": "飯店名稱降冪排序",
+    "@sortHotelNameDesc": {
+        "description": "飯店名稱降冪排序"
+    },
+    "sortProgressAsc": "任務進度升冪排序",
+    "@sortProgressAsc": {
+        "description": "任務進度升冪排序"
+    },
+    "sortProgressDesc": "任務進度降冪排序",
+    "@sortProgressDesc": {
+        "description": "任務進度降冪排序"
     }
 }

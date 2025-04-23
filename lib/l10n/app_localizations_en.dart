@@ -21,6 +21,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settingsBarItem => 'Settings';
 
   @override
+  String get filter => 'Filter';
+
+  @override
+  String get sort => 'Sort';
+
+  @override
+  String get all => 'All';
+
+  @override
   String get confirm => 'Confirm';
 
   @override
@@ -58,4 +67,45 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get chineseTraditional => 'Chinese (Traditional)';
+
+  @override
+  String totalCleanRoom(Object count) {
+    return 'Total Clean Room: $count rooms';
+  }
+
+  @override
+  String get cleanStatusDirty => 'Dirty';
+
+  @override
+  String get cleanStatusCleaning => 'Cleaning';
+
+  @override
+  String get cleanStatusFinished => 'Finished';
+
+  @override
+  String get taskProgress => 'Task Progress';
+
+  @override
+  String get startCleaning => 'Start Cleaning';
+
+  @override
+  String get viewTask => 'View Task';
+
+  @override
+  String get sortCleanStatusAsc => 'Clean Status Ascending';
+
+  @override
+  String get sortCleanStatusDesc => 'Clean Status Descending';
+
+  @override
+  String get sortHotelNameAsc => 'Hotel Name Ascending';
+
+  @override
+  String get sortHotelNameDesc => 'Hotel Name Descending';
+
+  @override
+  String get sortProgressAsc => 'Task Progress Ascending';
+
+  @override
+  String get sortProgressDesc => 'Task Progress Descending';
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc_dashboard/widgets/app_colors.dart';
 
 class AppTheme {
   const AppTheme();
@@ -9,7 +10,7 @@ class AppTheme {
       appBarTheme: const AppBarTheme(backgroundColor: Colors.teal),
       colorScheme: ColorScheme.fromSeed(
         brightness: Brightness.dark,
-        seedColor: Colors.white,
+        seedColor: AppColors.seedColor,
       ),
     );
   }
@@ -19,7 +20,7 @@ class AppTheme {
       useMaterial3: true,
       appBarTheme: AppBarTheme(backgroundColor: Colors.grey.shade200),
       colorScheme: ColorScheme.fromSeed(
-        seedColor: Colors.grey.shade200,
+        seedColor: AppColors.seedColor,
       ),
     );
   }

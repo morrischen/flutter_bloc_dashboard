@@ -39,8 +39,8 @@ jobs:
         run: flutter test
 
       # 如果需要打包 apk，可以加入下面的步驟
-      - name: Build APK
-        run: flutter build apk --release
+      # - name: Build APK
+      #   run: flutter build apk --release
 
       # Upload apk to Firebase distribution
       # - name: Upload apk to Firebase distribution

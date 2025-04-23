@@ -15,12 +15,11 @@ final Logger kLogger = Logger();
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   HydratedBloc.storage = await HydratedStorage.build(
-    storageDirectory:
-        kIsWeb
-            ? HydratedStorageDirectory.web
-            : HydratedStorageDirectory(
-              (await getApplicationDocumentsDirectory()).path,
-            ),
+    storageDirectory: kIsWeb
+        ? HydratedStorageDirectory.web
+        : HydratedStorageDirectory(
+            (await getApplicationDocumentsDirectory()).path,
+          ),
   );
   runApp(const DashboardApp());
 }
@@ -30,7 +29,7 @@ class DashboardApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
+    return BlocProvider<SettingsCubit>(
       create: (context) => SettingsCubit(),
       child: BlocBuilder<SettingsCubit, SettingsState>(
         buildWhen: (previous, current) => previous != current,

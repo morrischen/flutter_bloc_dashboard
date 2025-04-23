@@ -2,11 +2,11 @@
     "@@locale": "zh",
     "appName": "Flutter 仪表板应用",
     "@appName": {
-        "description": "Flutter 仪表板应用"
+        "description": "Flutter 儀表板應用"
     },
     "homeBarItem": "首页",
     "@homeBarItem": {
-        "description": "首页"
+        "description": "首頁"
     },
     "analysisBarItem": "分析",
     "@analysisBarItem": {
@@ -14,11 +14,23 @@
     },
     "settingsBarItem": "设置",
     "@settingsBarItem": {
-        "description": "设置"
+        "description": "設定"
+    },
+    "filter": "筛选",
+    "@filter": {
+        "description": "篩選"
+    },
+    "sort": "排序",
+    "@filter": {
+        "description": "排序"
+    },
+    "all": "全部",
+    "@filter": {
+        "description": "全部"
     },
     "confirm": "确定",
     "@confirm": {
-        "description": "确定"
+        "description": "確定"
     },
     "cancel": "取消",
     "@cancel": {
@@ -26,35 +38,35 @@
     },
     "selectOption": "选择选项",
     "@selectOption": {
-        "description": "选择选项"
+        "description": "選擇選項"
     },
     "systemLanguage": "系统语言",
     "@systemLanguage": {
-        "description": "系统语言"
+        "description": "系統語言"
     },
     "systemTheme": "系统主题",
     "@systemTheme": {
-        "description": "系统主题"
+        "description": "系統主題"
     },
     "defaultTheme": "默认主题",
     "@defaultTheme": {
-        "description": "默认主题"
+        "description": "預設主題"
     },
     "lightTheme": "浅色主题",
     "@lightTheme": {
-        "description": "浅色主题"
+        "description": "淺色主題"
     },
     "darkTheme": "深色主题",
     "@darkTheme": {
-        "description": "深色主题"
+        "description": "深色主題"
     },
     "homeScreenTitle": "首页",
     "@homeScreenTitle": {
-        "description": "首页"
+        "description": "首頁"
     },
     "languageScreenTitle": "选择语言",
     "@languageScreenTitle": {
-        "description": "选择语言"
+        "description": "選擇語言"
     },
     "english": "英文",
     "@english": {
@@ -66,6 +78,65 @@
     },
     "chineseTraditional": "繁体中文",
     "@chineseTraditional": {
-        "description": "繁体中文"
+        "description": "繁體中文"
+    },
+    "totalCleanRoom": "待清洁房间数量: {count}间",
+    "@totalCleanRoom": {
+        "description": "待清潔房間數量count間",
+        "placeholder": {
+            "count": {
+                "type": "int",
+                "format": "number",
+                "description": "房間數量"
+            }
+        }
+    },
+    "cleanStatusDirty": "待清洁",
+    "@cleanStatusDirty": {
+        "description": "待清潔"
+    },
+    "cleanStatusCleaning": "清洁中",
+    "@cleanStatusCleaning": {
+        "description": "清潔中"
+    },
+    "cleanStatusFinished": "已完成",
+    "@cleanStatusFinished": {
+        "description": "已完成"
+    },
+    "taskProgress": "任务进度",
+    "@taskProgress": {
+        "description": "任務進度"
+    },
+    "startCleaning": "开始清洁",
+    "@startCleaning": {
+        "description": "開始清潔"
+    },
+    "viewTask": "查看任务",
+    "@viewTask": {
+        "description": "檢視任務"
+    },
+    "sortCleanStatusAsc": "清洁状态升序排序",
+    "@sortCleanStatusAsc": {
+        "description": "清潔狀態升冪排序"
+    },
+    "sortCleanStatusDesc": "清洁状态降序排序",
+    "@sortCleanStatusDesc": {
+        "description": "清潔狀態降冪排序"
+    },
+    "sortHotelNameAsc": "酒店名称升序排序",
+    "@sortHotelNameAsc": {
+        "description": "飯店名稱升冪排序"
+    },
+    "sortHotelNameDesc": "酒店名称降序排序",
+    "@sortHotelNameDesc": {
+        "description": "飯店名稱降冪排序"
+    },
+    "sortProgressAsc": "任务进度升序排序",
+    "@sortProgressAsc": {
+        "description": "任務進度升冪排序"
+    },
+    "sortProgressDesc": "任务进度降序排序",
+    "@sortProgressDesc": {
+        "description": "任務進度降冪排序"
     }
 }
