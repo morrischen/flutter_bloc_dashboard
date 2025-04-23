@@ -97,11 +97,11 @@ flutter run
 - 支援篩選功能，根據清潔狀態（待清潔、清潔中、已完成）篩選任務。
   | **篩選功能**                      |
   |----------------------------------|
-  | ![Screenshots](screenshots/filter_clean_status.png) |
+  | <img src="screenshots/filter_clean_status.png" alt="篩選功能" height="478"> |
 - 提供排序功能，按清潔狀態、飯店名稱或進度進行升序或降序排序。
   | **排序功能**                      |
   |----------------------------------|
-  | ![Screenshots](screenshots/task_sorting.png) |
+  | <img src="screenshots/task_sorting.png" alt="篩選功能" height="478"> |
 
 ### 2. 設定頁面
 - 支援繁體中文、簡體中文和英文，切換語言時，應用程式會即時更新顯示語言。
